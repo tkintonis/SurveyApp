@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">SurveyApp</string>
+    <string name="retry">Retry</string>
+    <string name="internet_connection_message">Check your internet connection and try again</string>
+    <string name="welcome">Welcome</string>
+    <string name="start_survey_btn_txt">Start survey</string>
+    <string name="answer_text_hint">Type here for an answer…</string>
+    <string name="submit_answer_btn_txt">Submit</string>
+    <string name="already_submitted_btn_txt">Already Submitted</string>
+    <string name="questions_progress">Question %d/%d</string>
+    <string name="previous_btn_txt">Previous</string>
+    <string name="next_btn_txt">Next</string>
+    <string name="submitted_questions_progress">Questions submitted: %d</string>
+    <string name="success">Success!</string>
+    <string name="failure">Failure!</string>
+    <string name="submit">Submit</string>
+    <string name="submitted">Already Submitted</string>
+</resources>

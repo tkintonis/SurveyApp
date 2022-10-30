@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@color/g300"
+        android:paddingHorizontal="@dimen/_8dp">
+
+        <TextView
+            android:id="@+id/questionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24dp"
+            android:gravity="center"
+            android:textAlignment="gravity"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_30sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="What is your favourite food?" />
+
+        <EditText
+            android:id="@+id/answerEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:hint="@string/answer_text_hint"
+            android:textColor="@color/black"
+            android:textColorHint="@color/slate"
+            android:textSize="@dimen/_30sp"
+            app:layout_constraintBottom_toTopOf="@id/submitButton"
+            app:layout_constraintTop_toBottomOf="@id/questionTextView" />
+
+        <TextView
+            android:id="@+id/answerTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:gravity="center"
+            android:padding="@dimen/_24dp"
+            android:textAlignment="gravity"
+            android:textColor="@color/g400"
+            android:textSize="@dimen/_30sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/submitButton"
+            app:layout_constraintTop_toBottomOf="@id/questionTextView"
+            tools:layout_editor_absoluteX="8dp"
+            tools:text="My favourite food is " />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/drawable_button_selector"
+            android:padding="@dimen/_8dp"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/answerEditText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/resultField"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_transparent"
+        android:clickable="true"
+        android:elevation="@dimen/_20dp"
+        android:focusable="true"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/resultContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:background="@color/zeus">
+
+            <TextView
+                android:id="@+id/resultText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/_20dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_30sp"
+                android:textStyle="bold"
+                tools:text="@string/success" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/retryBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:background="@drawable/retry_button_bg"
+                android:text="@string/retry" />
+
+        </LinearLayout>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
